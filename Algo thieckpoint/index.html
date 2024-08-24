@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    function analyserPhrase(phrase) {
+        // Retirer le dernier caractère s'il s'agit d'un point
+        if (phrase[phrase.length - 1] === '.') {
+            phrase = phrase.slice(0, -1);
+        }
+    
+        // Compteur de caractères (longueur de la phrase)
+        let longueur = phrase.length + 1; // On ajoute 1 pour compter le point final
+    
+        // Compteur de mots
+        let mots = phrase.split(' ').length;
+    
+        // Compteur de voyelles
+        let voyelles = 0;
+        let listeVoyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
+    
+        for (let i = 0; i  phrase>.length; i++) {
+            if (listeVoyelles.includes(phrase[i])) {
+                voyelles++;
+            }
+        }
+    
+        return {
+            longueur: longueur,
+            mots: mots,
+            voyelles: voyelles
+        };
+    }
+    
+
+</body>
+</html>
